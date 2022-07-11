@@ -15,6 +15,7 @@ namespace homework
         public Form4()
         {
             InitializeComponent();
+
         }
 
         public int guess, min, max;
@@ -27,9 +28,10 @@ namespace homework
             {
                 strValue = value;
             }
+            //get { return strValue; }
         }
-        
 
+        
         private void butshow_Click(object sender, EventArgs e)
         {
 
@@ -54,9 +56,14 @@ namespace homework
             //showmaker.Show();
             
             showmaker.ShowDialog();
-            label1_tx.Text = strValue;
-           
-        }
+            //label1_tx.Text = strValue;
 
+
+        }
+        public string myshow()
+        {
+            label1_tx.Text = strValue;
+            return strValue;
+        }
     }
 }

@@ -38,14 +38,14 @@ namespace homework
             else if (number > count.guess)
             {
                 count.max = number;
-                count.StrValue = "比"+number+"小";
+                count.StrValue = "太大了，介於"+count.min+","+count.max;
                 
 
             }
             else if (number < count.guess)
             {
                 count.min = number;
-                count.StrValue = "比"+number+"大";
+                count.StrValue = "太小了,介於" + count.min+","+count.max;
                 
 
             }
@@ -58,10 +58,10 @@ namespace homework
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Form4 count = (Form4)this.Owner;
+            Form4 count = (Form4)this.Owner;
             //guessnumber();
             guessnumber();
-
+            count.myshow();
         }
 
         private void button2_Click(object sender, EventArgs e)
